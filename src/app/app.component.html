@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-sm-8" style="padding-left: 10px;padding-right: 0px">
+          <app-navbar></app-navbar>
+          <router-outlet></router-outlet>
+          <!--<app-home></app-home>
+          <app-task-pool></app-task-pool>-->
+      </div>
+      <div class="col-sm-4" style="padding-right: 10px;padding-left: 0px;">
+          <app-home-portfolio></app-home-portfolio>
+          <app-home-side-bar></app-home-side-bar>
+      </div>
+  </div>
+  <app-home-footer></app-home-footer>
+</div>
+<div (mouseover)="changeText=true" (mouseout)="changeText=false">
+    <span *ngIf="!changeText">Hide</span>
+    <span *ngIf="changeText">Show</span>
+    <ejs-tooltip #tooltip content='Lets go green & Save Earth !!!' style="display:block;position:absolute;left:calc( 50% - 60px);top:45%;">
+
+        <!-- Button element -->
+        <button ejs-button>Show Tooltip</button>
+    </ejs-tooltip>
+  </div>
